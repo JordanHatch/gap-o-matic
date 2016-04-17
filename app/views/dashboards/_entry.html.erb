@@ -1,6 +1,6 @@
 <li>
   <h2 class="title"><%= entry.title %></h2>
-  <div class="status p<%= entry.percent %>">
+  <div class="status p<%= entry.percent %> <%= 'green' if entry.percent == 100 %>">
     <span><%= entry.percent %>%</span>
     <div class="slice">
         <div class="bar"></div>
