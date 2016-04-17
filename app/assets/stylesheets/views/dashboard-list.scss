@@ -1,0 +1,23 @@
+.dashboard-list {
+  @include smaller-wrap;
+
+  h1 {
+    font-size: 23px;
+    padding: 20px 0;
+  }
+
+  ul {
+    padding: 20px 0 20px 20px;
+  }
+
+  li {
+    list-style: disc;
+    font-size: 17px;
+    padding-bottom: 3px;
+  }
+
+  .new a {
+    @include button;
+  }
+
+}

@@ -1,0 +1,121 @@
+.dashboard {
+
+  header {
+    @include wrap;
+
+    background: $primary-colour;
+    color: $primary-colour-inverted;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h1 {
+      font-size: 17px;
+      font-weight: bold;
+      text-align: center;
+
+      @include full-width {
+        font-size: 25px;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  > p, > ul, > h2 {
+    @include wrap;
+  }
+
+  ul.entries {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    @include full-width {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: stretch;
+    }
+
+    li {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 5px;
+      overflow: auto;
+      position: relative;
+
+      @include full-width {
+        width: 350px;
+        margin-right: 5px;
+        min-height: 120px;
+      }
+
+      .title, .description {
+        float: left;
+        width: 75%;
+      }
+      .status {
+        @extend .c100;
+
+        float: right;
+        margin: 0;
+        font-size: 60px;
+
+        > span {
+          color: #000;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+
+        @include full-width {
+          font-size: 19px;
+        }
+      }
+      .description {
+        padding-top: 7px;
+        font-size: 12px;
+        line-height: 1.3;
+        clear: left;
+      }
+      .edit {
+        font-size: 12px;
+        padding: 5px 0;
+        clear: left;
+
+        @include full-width {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 10px;
+        }
+      }
+
+      &.new-entry {
+        padding: 0;
+
+        a {
+          display: block;
+          color: #888;
+          font-size: 17px;
+          padding: 10px;
+
+          &:hover {
+            background: #eee;
+          }
+        }
+
+        @include full-width {
+          display: flex;
+          align-items: stretch;
+
+          a {
+            font-size: 25px;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+
+}

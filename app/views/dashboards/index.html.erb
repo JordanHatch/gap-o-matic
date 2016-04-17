@@ -1,0 +1,11 @@
+<section class="dashboard-list">
+  <h1>Dashboards</h1>
+
+  <p class="new"><%= link_to 'add a new dashboard', new_dashboard_path %></p>
+
+  <ul>
+    <% dashboards.each do |dashboard| %>
+    <li><%= link_to dashboard.title, dashboard_path(dashboard) %></li>
+    <% end %>
+  </ul>
+</section>

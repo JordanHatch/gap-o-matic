@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	background: #fcfcfc;
+	font-family: $font-stack;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+a, a:visited, a:link {
+	color: $primary-colour;
+}
+a:hover, a:active {
+	color: darken($primary-colour, 10%);
+}

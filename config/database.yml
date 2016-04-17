@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: gapomatic_development
+
+test:
+  <<: *default
+  database: gapomatic_test
+
+production:
+  <<: *default
+  database: gapomatic_production
+  username: gapomatic
+  password: <%= ENV['GAP-O-MATIC_DATABASE_PASSWORD'] %>

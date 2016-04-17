@@ -1,0 +1,25 @@
+<%= semantic_form_for [dashboard, entry] do |f| %>
+
+  <%= f.inputs do %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :percent %>
+    <%= f.input :order %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit %>
+    <%= f.action :cancel, as: :link, url: dashboard_path(dashboard) %>
+  <% end %>
+<% end %>
+
+<% if entry.persisted? %>
+  <section class="delete">
+    <%= button_to 'Delete this entry', [dashboard, entry],
+                                       method: :delete,
+                                       class: 'button-delete',
+                                       data: {
+                                         confirm: 'Are you sure you want to delete this?'
+                                       } %>
+  </section>
+<% end %>

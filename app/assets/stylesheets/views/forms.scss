@@ -1,0 +1,75 @@
+.form {
+  @include smaller-wrap;
+}
+
+form.formtastic {
+  .input {
+    .label {
+      width: 100%;
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .inline-hints {
+      margin-left: 0;
+      font-size: 12px;
+    }
+
+    &.stringish {
+      input {
+        @include string-input;
+      }
+
+      input[max] {
+        max-width: none;
+      }
+    }
+
+    &.error input {
+      border-color: $danger-colour;
+    }
+
+    .inline-errors {
+      margin-left: 0;
+      color: $danger-colour;
+    }
+  }
+
+  .actions {
+    padding-left: 0;
+
+    .action {
+      float: none;
+      padding: 0 0 10px;
+    }
+    .link_action a {
+      color: #888;
+    }
+
+    input[type=submit], button {
+      @include button;
+    }
+  }
+}
+
+input[type=submit], button {
+  @include button;
+}
+
+section.single-page-form {
+  form, > h2, > h1 {
+    @include smaller-wrap;
+  }
+
+  >h1, >h2 {
+    font-size: 23px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.delete {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 50px;
+}

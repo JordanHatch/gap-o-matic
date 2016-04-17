@@ -1,0 +1,60 @@
+@mixin full-width {
+  @media (min-width: $full-width) { @content; }
+}
+
+@mixin wrap {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@mixin smaller-wrap {
+  @include wrap;
+
+  @include full-width {
+    width: $full-width;
+    margin: 0 auto;
+  }
+}
+
+@mixin string-input {
+  font-size: 14px;
+  font-family: $font-stack;
+  padding: 5px 6px;
+  width: 100%;
+  border: 1px solid #ccc;
+
+  @include full-width {
+    font-size: 18px;
+    padding: 5px 7px;
+  }
+}
+
+@mixin button {
+  background: $primary-colour;
+  color: $primary-colour-inverted;
+  font-family: $font-stack;
+  padding: 7px 9px;
+  font-size: 14px;
+  border: none;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+
+  @include full-width {
+    padding: 8px 12px;
+    font-size: 17px;
+  }
+
+  &:hover {
+    background: lighten($primary-colour, 10%);
+    cursor: pointer;
+  }
+  &.button-delete {
+    background: $danger-colour;
+    color: $danger-colour-inverted;
+
+    &:hover {
+      background: lighten($danger-colour, 10%);
+    }
+  }
+}
