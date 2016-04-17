@@ -15,6 +15,13 @@ bin/rake db:setup
 foreman start
 ```
 
+## Configuration
+
+The application accepts the following environment variables as configuration:
+
+- `USERNAME`: username for HTTP basic authentication
+- `PASSWORD`: password for HTTP basic authentication
+
 ## Licence
 
 MIT License
