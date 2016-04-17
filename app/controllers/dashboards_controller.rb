@@ -4,6 +4,13 @@ class DashboardsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "dashboard-#{Time.now.to_i}",
+               show_as_html: params.key?('debug')
+      end
+    end
   end
 
   def new

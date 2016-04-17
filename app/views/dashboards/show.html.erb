@@ -3,18 +3,8 @@
 
   <ul class="entries">
     <% entries.each do |entry| %>
-    <li>
-      <h2 class="title"><%= entry.title %></h2>
-      <div class="status p<%= entry.percent %>">
-        <span><%= entry.percent %>%</span>
-        <div class="slice">
-            <div class="bar"></div>
-            <div class="fill"></div>
-        </div>
-      </div>
-      <p class="description"><%= entry.description %></p>
-      <p class="edit"><%= link_to 'edit', edit_dashboard_entry_path(dashboard, entry) %></p>
-    </li>
+      <%= render partial: 'entry', locals: { entry: entry,
+                                             include_links: true } %>
     <% end %>
 
     <li class="new-entry">
