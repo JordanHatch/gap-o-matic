@@ -31,5 +31,7 @@ module GapOMatic
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.middleware.use Rack::SslEnforcer if ENV['FORCE_SSL'].present?
   end
 end

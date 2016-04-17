@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'formtastic'
 
 gem 'puma'
+gem 'rack-ssl-enforcer'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -21,6 +21,7 @@ The application accepts the following environment variables as configuration:
 
 - `USERNAME`: username for HTTP basic authentication
 - `PASSWORD`: password for HTTP basic authentication
+- `FORCE_SSL`: will force SSL connections (using `Rack::SslEnforcer`) when set
 
 ## Licence
 
