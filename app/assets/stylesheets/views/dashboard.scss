@@ -19,6 +19,18 @@
         padding: 5px 0;
       }
     }
+
+    $pdf: false !default;
+    @if $pdf {
+      background: none;
+      color: #000;
+      padding-bottom: 0;
+
+      h1 {
+        font-size: 45px;
+        text-align: left;
+      }
+    }
   }
 
   > p, > ul, > h2 {
@@ -32,7 +44,7 @@
     @include full-width {
       display: flex;
       flex-flow: row wrap;
-      justify-content: center;
+      justify-content: left;
       align-content: stretch;
     }
 
@@ -46,7 +58,11 @@
       @include full-width {
         width: 350px;
         margin-right: 5px;
-        min-height: 120px;
+        min-height: 140px;
+
+        /* Fallbacks for the PDF version and older browsers */
+        display: inline-block;
+        vertical-align: top;
       }
 
       .title, .description {

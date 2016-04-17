@@ -1,5 +1,11 @@
 @mixin full-width {
-  @media (min-width: $full-width) { @content; }
+  $pdf: false !default;
+  
+  @if $pdf {
+    @content;
+  } @else {
+    @media (min-width: $full-width) { @content; }
+  }
 }
 
 @mixin wrap {
