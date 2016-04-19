@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417105214) do
+ActiveRecord::Schema.define(version: 20160419104936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,5 +35,14 @@ ActiveRecord::Schema.define(version: 20160417105214) do
   end
 
   add_index "entries", ["dashboard_id"], name: "index_entries_on_dashboard_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name",         null: false
+    t.string   "email",        null: false
+    t.string   "provider",     null: false
+    t.string   "provider_uid", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
 end
