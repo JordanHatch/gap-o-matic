@@ -14,7 +14,14 @@ class Entry < ActiveRecord::Base
 
   default_scope -> { where(deleted: false).order(order: :asc) }
 
+  after_save :update_timestamp_of_dashboard
+
   def soft_delete!
     update_attribute(:deleted, true)
+  end
+
+private
+  def update_timestamp_of_dashboard
+    dashboard.touch
   end
 end
