@@ -17,6 +17,8 @@ gem 'wkhtmltopdf-binary-edge'
 
 gem 'formtastic'
 
+gem 'omniauth-google-oauth2'
+
 gem 'puma'
 gem 'rack-ssl-enforcer'
 
