@@ -42,7 +42,7 @@ class DashboardsController < ApplicationController
 
 private
   def dashboards
-    @dashboards ||= Dashboard.all
+    @dashboards ||= Dashboard.in_title_order
   end
   helper_method :dashboards
 
