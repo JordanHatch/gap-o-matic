@@ -77,25 +77,40 @@
 
       &.new-entry {
         padding: 0;
-
-        a {
-          display: block;
-          color: #888;
-          font-size: 17px;
-          padding: 10px;
-
-          &:hover {
-            background: #eee;
-          }
-        }
+        background: none;
+        border: 1px dashed $grey;
 
         @include full-width {
           display: flex;
           align-items: stretch;
+        }
 
-          a {
-            font-size: 25px;
-            flex: 1;
+        a {
+          flex: 1;
+          display: flex;
+          align-items: center;
+
+          color: #888;
+          font-size: 17px;
+          text-decoration: none;
+
+          padding: 10px;
+          @include full-width {
+            padding: 15px;
+          }
+
+          i {
+            padding-right: 8px;
+
+            @include full-width {
+              opacity: 0.1;
+              font-size: 100px;
+              padding-right: 15px;
+            }
+          }
+
+          &:hover {
+            background: #eee;
           }
         }
       }

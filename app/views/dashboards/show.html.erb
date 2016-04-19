@@ -8,7 +8,9 @@
     <% end %>
 
     <li class="new-entry">
-      <%= link_to 'Add a new entry', new_dashboard_entry_path(dashboard) %>
+      <%= link_to new_dashboard_entry_path(dashboard) do %>
+        <%= fa_icon 'plus-circle' %> Add a new entry
+      <% end %>
     </li>
   </ul>
 
