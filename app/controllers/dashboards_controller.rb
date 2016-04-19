@@ -18,6 +18,7 @@ class DashboardsController < ApplicationController
 
   def create
     dashboard.assign_attributes(dashboard_params)
+    dashboard.creator = current_user
 
     if dashboard.save
       flash.notice = 'Dashboard created'
