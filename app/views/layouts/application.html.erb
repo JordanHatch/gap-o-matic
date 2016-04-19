@@ -22,6 +22,7 @@
     <% if user_signed_in? %>
       <p class="signed-in-user">
         <span><%= current_user.name %></span>
+        <span><%= link_to 'home', root_path %></span>
         <span><%= link_to 'sign out', destroy_session_path %></span>
       </p>
     <% end %>
