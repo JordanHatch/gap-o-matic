@@ -11,6 +11,10 @@
       Sign in with your <em><%= GapOMatic.permitted_email_hostnames.join(', ') %></em> account.
     </p>
 
-    <p><%= link_to "Sign in with Google", "/auth/google", :class => 'button' %></p>
+    <p>
+      <%= link_to "/auth/google", :class => 'button' do %>
+        <%= fa_icon 'google' %> Sign in with Google
+      <% end %>
+    </p>
   <% end %>
 </section>

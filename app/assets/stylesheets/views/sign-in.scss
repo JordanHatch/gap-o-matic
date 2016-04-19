@@ -1,6 +1,8 @@
 .sign-in {
   @include smaller-wrap;
 
+  background: $white;
+
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 10px 20px;
