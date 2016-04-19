@@ -18,7 +18,10 @@
 
   <main>
     <% flash.each do |key, message| %>
-      <p class="flash flash-<%= key %>"><%= message %></p>
+      <p class="flash flash-<%= key %>">
+        <%= fa_icon_for_flash_message(key) %>
+        <%= message %>
+      </p>
     <% end %>
 
     <%= yield %>

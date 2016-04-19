@@ -95,18 +95,23 @@ footer {
 }
 
 .flash {
-	margin: 0px;
-	padding: 10px 15px;
-	font-size: 19px;
+	margin: 15px 0 8px;
+	padding: 7px 15px;
+	font-size: 13px;
 	font-weight: 600;
-	border-left: 10px solid;
-	background: #eee;
+
+	@include full-width {
+		font-size: 15px;
+		padding: 9px 15px;
+	}
 
 	&.flash-notice {
-		border-left-color: $success-colour;
+		background-color: $success-colour;
+		color: $success-colour-inverted;
 	}
 
 	&.flash-alert {
-		border-left-color: $danger-colour;
+		background-color: $danger-colour;
+		color: $danger-colour-inverted;
 	}
 }
