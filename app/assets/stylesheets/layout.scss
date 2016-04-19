@@ -104,11 +104,9 @@ footer {
 
 	&.flash-notice {
 		border-left-color: $success-colour;
-		// border-top-color: $success-colour;
 	}
 
 	&.flash-alert {
 		border-left-color: $danger-colour;
-		// border-top-color: $danger-colour;
 	}
 }
