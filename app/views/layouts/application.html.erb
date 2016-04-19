@@ -10,6 +10,12 @@
 </head>
 <body>
 
+  <% if content_for?(:header_title) %>
+  <header>
+    <h1><%= yield(:header_title) %></h1>
+  </header>
+  <% end %>
+
   <main>
     <% flash.each do |key, message| %>
       <p class="flash flash-<%= key %>"><%= message %></p>

@@ -1,39 +1,5 @@
 .dashboard {
 
-  header {
-    @include wrap;
-
-    background: $white;
-    color: $text-colour;
-    border-bottom: 1px solid $grey;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    h1 {
-      font-size: 17px;
-      font-weight: bold;
-      text-align: center;
-
-      @include full-width {
-        font-size: 25px;
-        padding: 5px 0;
-      }
-    }
-
-    $pdf: false !default;
-    @if $pdf {
-      background: none;
-      color: #000;
-      padding-bottom: 0;
-
-      h1 {
-        font-size: 45px;
-        text-align: left;
-      }
-    }
-  }
-
   > p, > ul, > h2 {
     @include wrap;
   }
