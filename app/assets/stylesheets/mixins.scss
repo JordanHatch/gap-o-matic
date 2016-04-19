@@ -1,6 +1,6 @@
 @mixin full-width {
   $pdf: false !default;
-  
+
   @if $pdf {
     @content;
   } @else {
@@ -17,7 +17,8 @@
 
   @include full-width {
     width: $full-width;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
