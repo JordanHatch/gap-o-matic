@@ -32,6 +32,22 @@ footer {
 	padding: 20px 0;
 	text-align: center;
 
+	.signed-in-user {
+		padding-bottom: 20px;
+		font-size: 14px;
+
+		span:not(:first-of-type)::before {
+			content: '/';
+			color: #ddd;
+			display: inline-block;
+			padding: 0 7px 0 5px;
+		}
+
+		&, a {
+			color: #888;
+		}
+	}
+
 	.colophon {
 		text-transform: uppercase;
 		text-shadow: #eee 0px 1px 0px;
