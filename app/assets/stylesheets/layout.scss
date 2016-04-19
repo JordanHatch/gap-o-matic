@@ -38,3 +38,22 @@ footer {
 		letter-spacing: 1px;
 	}
 }
+
+.flash {
+	margin: 0px;
+	padding: 10px 15px;
+	font-size: 19px;
+	font-weight: 600;
+	border-left: 10px solid;
+	background: #eee;
+
+	&.flash-notice {
+		border-left-color: $success-colour;
+		// border-top-color: $success-colour;
+	}
+
+	&.flash-alert {
+		border-left-color: $danger-colour;
+		// border-top-color: $danger-colour;
+	}
+}
