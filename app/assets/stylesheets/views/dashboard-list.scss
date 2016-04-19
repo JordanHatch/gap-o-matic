@@ -1,5 +1,9 @@
 .dashboard-list {
-  @include smaller-wrap;
+  @include wrap;
+  overflow: auto;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   h1 {
     font-size: 23px;
@@ -7,17 +11,39 @@
   }
 
   ul {
-    padding: 20px 0 20px 20px;
+    padding: 10px 0;
+
+    @include full-width {
+      float: left;
+      width: 80%;
+      padding: 0 0 0 30px;
+    }
   }
 
   li {
-    list-style: disc;
-    font-size: 17px;
-    padding-bottom: 3px;
+    list-style: none;
+    margin-bottom: 5px;
+
+    a {
+      padding: 10px;
+      display: block;
+      background: $white;
+      box-shadow: #dadada 1px 2px 0px, #eee 0px 0px 0px 1px;
+      color: $text-colour;
+      text-decoration: none;
+      font-size: 17px;
+    }
   }
 
-  .new a {
-    @include button;
+  .new {
+    @include full-width {
+      float: left;
+      width: 20%;
+    }
+
+    a {
+      @include button;
+    }
   }
 
 }
