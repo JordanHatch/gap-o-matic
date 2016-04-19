@@ -19,8 +19,6 @@ foreman start
 
 The application accepts the following environment variables as configuration:
 
-- `USERNAME`: username for HTTP basic authentication
-- `PASSWORD`: password for HTTP basic authentication
 - `FORCE_SSL`: will force SSL connections (using `Rack::SslEnforcer`) when set
 - `GOOGLE_CLIENT_ID`: client ID for the Google developer console account
 - `GOOGLE_CLIENT_SECRET`: client secret for the Google developer console account
