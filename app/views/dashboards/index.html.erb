@@ -1,7 +1,12 @@
 <% content_for(:header_title, 'Dashboards') %>
 
 <section class="dashboard-list">
-  <p class="new"><%= link_to 'add a new dashboard', new_dashboard_path %></p>
+  <p class="new">
+    <%= link_to new_dashboard_path do %>
+      <%= fa_icon "plus-circle" %>
+      add a new dashboard
+    <% end %>
+  </p>
 
   <ul>
     <% dashboards.each do |dashboard| %>

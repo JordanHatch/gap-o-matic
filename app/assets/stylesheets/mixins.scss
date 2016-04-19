@@ -57,6 +57,10 @@
     font-size: 17px;
   }
 
+  i {
+    padding-right: 5px;
+  }
+
   &:hover {
     background: darken($primary-colour, 10%);
     cursor: pointer;
