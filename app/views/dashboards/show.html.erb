@@ -14,6 +14,10 @@
     </li>
   </ul>
 
-  <p class="pdf-link"><%= link_to 'Download as PDF', dashboard_path(dashboard, format: :pdf) %></p>
+  <p class="pdf-link">
+    <%= link_to dashboard_path(dashboard, format: :pdf) do %>
+      <%= fa_icon 'download' %> Download as PDF
+    <% end %>
+  </p>
 
 </section>
