@@ -3,8 +3,9 @@
   header {
     @include wrap;
 
-    background: $primary-colour;
-    color: $primary-colour-inverted;
+    background: $white;
+    color: $text-colour;
+    border-bottom: 1px solid $grey;
 
     padding-top: 10px;
     padding-bottom: 10px;
@@ -38,7 +39,7 @@
   }
 
   ul.entries {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
 
     @include full-width {
@@ -49,15 +50,16 @@
     }
 
     li {
-      border: 1px solid #ddd;
+      background: $white;
+      border: 1px solid $grey;
       padding: 10px;
-      margin-bottom: 5px;
+      margin-bottom: 2px;
       overflow: auto;
       position: relative;
 
       @include full-width {
-        width: 350px;
-        margin-right: 5px;
+        width: 310px;
+        margin-right: 2px;
         min-height: 140px;
 
         /* Fallbacks for the PDF version and older browsers */
@@ -131,6 +133,17 @@
           }
         }
       }
+    }
+  }
+
+  .pdf-link {
+    padding-top: 20px;
+
+    a {
+      @include button;
+
+      width: 250px;
+      margin: 0 auto;
     }
   }
 

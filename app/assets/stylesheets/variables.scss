@@ -1,7 +1,13 @@
 $font-stack: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
-$primary-colour: #006394;
-$primary-colour-inverted: #fff;
+$background-colour: #f5f5f5;
+$text-colour: #3f3f44;
+
+$white: #fff;
+$grey: #e7e7ec;
+
+$primary-colour: #1093fe;
+$primary-colour-inverted: $white;
 
 $danger-colour: #c92e2e;
 $danger-colour-inverted: #fff;

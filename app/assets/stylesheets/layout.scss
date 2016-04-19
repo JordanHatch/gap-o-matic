@@ -5,11 +5,12 @@
 }
 
 body {
-	background: #fcfcfc;
+	background: $background-colour;
 	font-family: $font-stack;
 	font-size: 15px;
 	font-weight: normal;
 	line-height: 1.2;
+	border-top: 5px solid $primary-colour;
 }
 
 h1, h2, h3 {
@@ -27,7 +28,8 @@ a.button {
 }
 
 footer {
-	border-top: 1px solid #eee;
+	background: $white;
+	border-top: 1px solid $grey;
 	margin: 40px 0 0;
 	padding: 20px 0;
 	text-align: center;
